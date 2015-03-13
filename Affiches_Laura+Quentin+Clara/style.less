@@ -1,0 +1,483 @@
+
+/* DÉFINITION DES VARIABLES */
+.header:after {
+        content: "I want to cook";
+}
+
+/* import des caractères */
+
+@font-face {
+    font-family: InknutAntiqua;
+    src: url("fonts/InknutAntiqua-Bold.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: InknutAntiqua;
+    src: url("fonts/InknutAntiqua-Light.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Coelacminikin;
+    src: url("fonts/CoelacMinikin.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+ 
+@font-face {
+    font-family: Coelacminikin;
+    src: url("fonts/CoelacItalic.otf") format('opentype');
+    font-weight: normal;
+    font-style: italic;
+    }
+
+
+/* variables de caractères */
+
+@font-labeur: Coelacminikin;
+@font-titrage: InknutAntiqua;
+
+/* variables de corps de caractères */
+    
+@corps-labeur: 12px;
+@corps-titrage: 100px;
+@corps-mini: 8px;
+@corps-italic: 14px;
+
+
+/* variables de couleurs */
+
+
+@bleu: #0606A6;
+@orange: #FF7519;
+
+
+/* Application au body */
+
+.body {
+    width: 100%;
+}
+
+p {
+    font-size: @corps-labeur;
+    font-family: @font-labeur;
+    }
+    
+
+h1{
+    font-size: @corps-titrage;
+    font-family: @font-titrage;
+    font-weight: bold;
+    line-height: 1em;
+    text-align: right;
+    }
+
+h2{
+    font-family: @font-titrage;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    text-color: @bleu;
+    font-size: @corps-mini;
+    font-family: @font-labeur;
+}
+
+div.paper {
+     background-color: white;
+}
+
+
+i, em {
+    font-family: Coelacminikin;
+    font-style: italic;
+    font-size: @corps-italic;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+
+/* Définition des formats */
+
+
+
+/* Petit format :( — Montass & Theo et princessHTMLOL  */
+
+@media all and (min-width: 100px) and (max-width: 520px)  {
+
+/* paper, page, toussa ... */
+
+.paper {
+     width: 74mm;
+     height: 105mm;
+    }
+    .page {
+        width: 74mm;
+        height: 105mm;
+    }
+    body {
+        font-size: 7px;
+        }
+    p {
+        font-size: 7px;
+        color: @bleu;
+        }
+h2 {
+color: @orange;
+}
+
+/* #Couverture style */
+
+#Couverture h1 {
+    font-size: 50px;
+    font-family: @font-titrage;
+    font-weight: 600;
+    line-height: 1.1em;
+    color: @bleu;
+    margin-left: -30px;
+    margin-top: -150px;
+    width: 127px;
+    }
+
+#Couverture h2 {
+    font-size: 13px;
+    line-height: 2.2em;
+    margin-top: -40px;
+    margin-left: -30px;
+    color: black;
+    }
+
+#Couverture h4 {
+    font-size: 9px;
+    color: @orange;
+     z-index: 0;
+position: relative;
+left: -60px;
+top: -22px;
+width: 350px;
+    -ms-transform: rotate(-90deg);
+    -ms-transform-origin: 0% 0%; /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: 0% 0%; /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    transform-origin: 0% 0%;
+    }
+    
+section.header{
+width:100px;
+}
+
+.paper {
+&:nth-child(odd) .header{
+    width: 300px;
+    margin-left: 50px;
+    -ms-transform: rotate(45deg);
+    -ms-transform-origin: 50% 50%; /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: 50% 50%; /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+        }
+}
+
+.paper {
+&:nth-child(even) .header{
+        width: 300px;
+        left: 200px;
+        -ms-transform: rotate(-45deg);
+    -ms-transform-origin: 50% 50%; /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: 50% 50%; /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    transform-origin: 50% 50%;
+        }
+}
+    
+
+/* Glossaire style */
+
+#Glossaire {
+    margin-top: 200px;
+}
+
+.ElementsDeGlossaire a {
+    color: black;
+    font-size: 10px;
+    }
+
+}
+
+
+/*Fiche:(-Caroline & So-Hyun) */
+
+@media all and (min-width: 520px) and (max-width: 800px) {
+
+.paper {
+     width: 148mm;
+     height: 105mm;
+     }
+
+.page {
+    width: 148mm;
+     height: 105mm;
+     }
+
+body {
+    font-size: 10px;
+    }
+    
+#Couverture {
+    -webkit-region-break-after: always;
+    }
+#Couverture h1{
+    font-family: @font-titrage;
+    font-weight: 500;
+    line-height: 1em;
+    color: @bleu;
+    margin-left:-25px;
+    }
+    
+#Couverture h2{
+    font-family: @font-titrage;
+    font-weight: normal;
+    color: @bleu;
+    margn-left: 200px;
+    }
+    
+#Couverture h4{
+    font-size: 10px;
+    margin-left:-25px;
+}
+
+#Glossaire {
+    display: none;
+    }
+a
+{
+    text-decoration: none;
+        color: black;
+    margin-left:-25px;
+    }
+
+.ElementsDeAppelIndex {
+    color: black;
+    display: none;
+    }
+
+#Preface {
+    display: none;
+    }
+
+h6 {
+    display: none;
+    }
+.Recettes {
+    -webkit-region-break-before: always;
+    }
+
+    }
+
+/* Moyen — Charlotte Angéline Manon */
+
+
+@media all and  (min-width: 800px) and (max-width: 1200px) {
+
+
+#Partie1 h2 {
+    -webkit-transform: rotate(270deg);
+    }
+
+#Partie1 p { 
+    margin: 100mm 0mm 100mm 0mm;
+    }
+    
+p#2 {
+    margin: 40mm 40mm 100mm 10mm; 
+    
+    }
+
+
+.paper {
+             width: 215mm;
+             height: 330mm;
+     }
+
+.page {
+        width: 215mm;
+        height: 330mm;
+         }
+         
+body {
+        font-size: 12px;
+        }
+}
+
+/* Grand — Laura Quentin Clara — Blue adverbs */
+
+@media all and (min-width: 1200px) and (max-width: 1300px) {
+    
+    
+    
+    /* défitinion du format */
+    
+    .body {height:1075mm;}
+    .paper {width: 990mm; height: 1075mm;}
+    .page {width: 990mm; height: 1075mm;}
+  
+        
+    /* éléments masqués */
+        
+    #AppelIndex {display:none;}         
+    #Colophon {display:none;}
+    #Licences {display:none;}
+    #Preface {display:none;}
+    #Index {display:none;}
+    #Couverture {display:none;}
+    #Glossaire {display:none;}
+    .header {display:none;}
+    h6 {display:none;}    
+    #intro_part2 {display:none;}
+    .footer {display:none;}
+    
+    /* mise en page des recettes */     
+         
+       
+         
+    .Recettes {
+        background-color: transparent;
+        border: solid 0px @bleu;
+        width:67.5mm;
+        height:46.5mm;
+        float:left;
+        overflow:visible;
+         } 
+    
+  
+            
+  
+    h2 {
+        font-size:10px;
+   color: @bleu;
+}
+
+ h3 {
+font-family: @font-labeur;
+font-size:10px;
+color: @bleu;
+}
+    p {
+        line-height: 13px;
+        font-size:10px;
+        color: @bleu;
+    }
+    
+    i, em {
+    font-size: 12px;
+}
+    
+    .adverb {
+    font-size: 56px;
+        color: @bleu;
+    }
+    
+   
+    
+    
+    #nous {position: fixed;
+        font-family: @font-labeur;
+        bottom: 0;
+        left: 0;
+    font-size: 10px;
+        color: @bleu;
+    }
+    
+}
+
+
+/* Grand — Laura Quentin Clara — Orange measures */
+
+@media all and (min-width: 1300px) and (max-width: 1600px) {
+    
+    
+    
+    /* défitinion du format */
+    
+    .body {height:1075mm;}
+    .paper {width: 990mm; height: 1075mm;}
+    .page {width: 990mm; height: 1075mm;}
+  
+        
+    /* éléments masqués */
+        
+    #AppelIndex {display:none;}         
+    #Colophon {display:none;}
+    #Licences {display:none;}
+    #Preface {display:none;}
+    #Index {display:none;}
+    #Couverture {display:none;}
+    #Glossaire {display:none;}
+    .header {display:none;}
+    h6 {display:none;}    
+    #intro_part2 {display:none;}
+    .footer {display:none;}
+    
+    /* mise en page des recettes */     
+         
+       
+         
+    .Recettes {
+        background-color: transparent;
+        border: solid 0px @bleu;
+        width:67.5mm;
+        height:46.5mm;
+        float:left;
+        overflow:visible;
+         } 
+    
+  
+            
+  
+    h2 {
+        font-size:10px;
+   color: transparent;
+}
+
+ h3 {
+font-family: @font-labeur;
+font-size:10px;
+color: transparent;
+}
+    p {
+        line-height: 13px;
+        font-size:10px;
+        color: transparent;
+    }
+    
+    i, em {
+    font-size: 12px;
+}
+    
+      .measure {
+        font-size: 56px;
+        color: #000000;
+          font-style: italic;
+    }
+    
+    
+    
+    
+    #nous {position: fixed;
+        font-family: @font-labeur;
+        bottom: 0;
+        left: 0;
+    font-size: 10px;
+        color: transparent;
+    }
+    
+}

@@ -1,0 +1,169 @@
+
+
+
+/* DÉFINITION DES VARIABLES */
+.header:after {
+        content: "";
+}
+
+.header{
+        display: none;
+
+}
+body{
+    -webkit-region-break-after:always;
+}
+/* import des caractères */
+
+@font-face {
+    font-family: InknutAntiqua;
+    src: url("https://github.com/clauseggers/Inknut-Antiqua/raw/master/TTF-OTF/InknutAntiqua-Bold.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: InknutAntiqua;
+    src: url("https://github.com/clauseggers/Inknut-Antiqua/raw/master/TTF-OTF/InknutAntiqua-Light.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Coelacminikin;
+    src: url("http://claraneumann.fr/fonts/coelacanth/CoelacMinikin.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+ 
+@font-face {
+    font-family: Coelacminikin;
+    src: url("http://claraneumann.fr/fonts/coelacanth/CoelacItalic.otf") format('opentype');
+    font-weight: normal;
+    font-style: italic;
+    }
+
+
+/* variables de caractères */
+
+@font-labeur: Coelacminikin;
+@font-titrage: InknutAntiqua;
+
+/* variables de corps de caractères */
+    
+@corps-labeur: 12px;
+@corps-titrage: 100px;
+@corps-mini: 8px;
+@corps-italic: 14px;
+
+
+/* variables de couleurs */
+
+
+@bleu: #0606A6;
+@orange: #FF7519;
+
+
+/* Application au body */
+
+.body {
+    width: 100%;
+}
+
+.body.recipient {
+    margin: 0 !important;
+}
+
+p {
+    font-size: @corps-labeur;
+    font-family: @font-labeur;
+    color: black;
+    }
+    
+
+h1{
+    font-size: @corps-titrage;
+    font-family: @font-titrage;
+    font-weight: bold;
+    line-height: 1em;
+    text-align: right;
+    }
+
+h2{
+    font-family: @font-titrage;
+    font-weight: normal;
+    padding: 0px;
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    text-color: @bleu;
+    font-size: @corps-mini;
+    font-family: @font-labeur;
+}
+
+div.paper {
+     background-color: white;
+}
+
+
+i, em {
+    font-family: Coelacminikin;
+    font-style: italic;
+    font-size: @corps-italic;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+div.ElementsDeGlossaire {
+    width:auto;
+    height: 2em;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    float:left;
+    position:relative;
+    white-space: nowrap;
+    -webkit-region-break-inside:avoid;
+
+}
+
+#Preface{
+    position:relative;
+    clear: both;
+
+}
+.Recettes {
+    max-width:400px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    float:left;
+    position:relative;
+    display:block;
+    -webkit-region-break-inside:avoid;
+
+/*
+width:250px;
+*/
+
+}
+
+#Index{
+    position: relative;
+    clear: both;
+}
+#Licences{
+    position: relative;
+    clear: both;
+}
+
