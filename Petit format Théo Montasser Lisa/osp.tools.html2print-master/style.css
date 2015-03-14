@@ -1,0 +1,548 @@
+
+/* DÉFINITION DES VARIABLES */
+.header:after {
+        content: "I want to cook";
+}
+
+/* import des caractères */
+
+@font-face {
+    font-family: InknutAntiqua;
+    src: url("fonts/InknutAntiqua-Bold.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: InknutAntiqua;
+    src: url("fonts/InknutAntiqua-Light.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Coelacminikin;
+    src: url("fonts/CoelacMinikin.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+ 
+@font-face {
+    font-family: Coelacminikin;
+    src: url("fonts/CoelacItalic.otf") format('opentype');
+    font-weight: normal;
+    font-style: italic;
+    }
+
+/* variables de caractères */
+
+@font-labeur: Coelacminikin;
+@font-titrage: InknutAntiqua;
+
+/* variables de corps de caractères */
+    
+@corps-labeur: 12px;
+@corps-titrage: 100px;
+@corps-mini: 8px;
+@corps-italic: 14px;
+
+/* variables de couleurs */
+
+@bleu: #0606A6;
+@orange: #FF4719;
+
+/* Application au body */
+
+.body {
+    width: 100%;
+}
+
+p {
+    font-size: @corps-labeur;
+    font-family: @font-labeur;
+    }
+
+h1{
+    font-size: @corps-titrage;
+    font-family: @font-titrage;
+    font-weight: bold;
+    line-height: 1em;
+    text-align: right;
+    }
+
+h2{
+    font-family: @font-titrage;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    text-color: @bleu;
+    font-size: @corps-mini;
+    font-family: @font-labeur;
+}
+
+div.paper {
+     background-color: white;
+}
+
+i, em {
+    font-family: Coelacminikin;
+    font-style: italic;
+    font-size: 15px;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+
+/* Définition des formats */
+
+/* Petit format :( — Montass & Theo et princessHTMLOL  */
+
+@media all and (min-width: 100px) and (max-width: 520px)  {
+
+/* paper, page, toussa ... */
+
+.paper {
+     width: 74mm;
+     height: 105mm;
+    }
+    .page {
+        width: 74mm;
+        height: 105mm;
+    }
+    .body {
+        height: 90mm;
+    }
+    #page-1 .body {
+        height: 110mm;
+    }
+    body {
+        font-size: 9px;
+        }
+
+    p {
+        font-size: 9px;
+        color: @bleu;
+        }
+    
+
+h2 {
+color: @orange;
+}
+
+/* #Couverture style */
+
+
+
+#Couverture h1 {  /* The Belgian Cook-Book */
+    font-size: 50px;
+    font-family: @font-titrage;
+    font-weight: 600;
+    line-height: 1.1em;
+    color: @bleu;
+    margin-left: 0px;
+    margin-top: -110px;
+    width: 127px;
+    }
+
+#Couverture h2 {  /* By Various */
+    position: absolute;
+    width: 250px;
+    line-height: 3em;
+    z-index: 9;
+    font-size: 13px;
+    color: @bleu;
+    margin-top: -75px;
+    margin-left: 2px;
+    }
+    
+
+.Recettes:nth-child(odd) h2 {  
+    position: absolute;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 50%;
+    z-index: 10;
+    font-size: 20px;
+    font-family: @font-titrage;
+    line-height: 2em;
+    color: @orange;
+    text-decoration: underline;
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: 0% 0%; /* Chrome, Safari, Opera */
+}
+
+
+.Recettes:nth-child(even) h2 {  
+    position: absolute;
+    text-align: center;
+    margin-top: 220px;
+    z-index: 0;
+    font-size: 20px;
+    font-family: @font-titrage;
+    line-height: 2em;
+    align: center;
+    color: @orange;
+    text-decoration: underline;
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: 0% 0%; /* Chrome, Safari, Opera */
+}    
+
+    
+.Recettes p 
+    {
+    
+    z-index: 0
+    }
+
+#Couverture h4 {   /* Deux lignes */
+    font-size: 12px;
+    color: @orange;
+    position: absolute;
+    left: -48px;
+    top: -22px;
+    width: 350px;
+    margin-left: 40px;
+    top: 174px;
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: 0% 0%; /* Chrome, Safari, Opera */
+    }
+
+    
+h6 /* part one */
+    {
+    position: absolute;
+    z-index: 2;
+    margin-left: 0px;
+    bottom: 50px;
+    font-family: @font-titrage;
+    color: @orange;
+    line-height: 1em;
+    font-size: 50px;
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: 0% 0%; /* Chrome, Safari, Opera */
+    }
+    
+    
+h3 /* sous-titre recettes */
+    {
+    font-family: @font-titrage;
+    color: @orange;
+    font-size: 10px;
+    }
+    
+    
+
+
+
+/* Header style — Aka I want to cook */
+
+/*    
+section.header{
+width:100px;
+margin-left: 45px;
+}
+*/
+
+.header {
+    font-family: @font-titrage;
+    color: @orange;
+    font-weight: light;
+}
+
+.paper:nth-child(odd) section.header{
+/* float: right;
+z-index: 0; */
+font-size: 12px;
+margin-left: 35px;
+-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+-webkit-transform-origin: 50% 50%; /* Chrome, Safari, Opera */
+        }
+
+.paper:nth-child(even) section.header{
+font-size: 12px;
+margin-left: -40px;
+-webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+-webkit-transform-origin: 50% 50%; /* Chrome, Safari, Opera */
+        }
+
+    
+/* pagination */
+    
+    .paper:nth-child(odd) section.footer{
+/* float: right;
+z-index: 0; */
+font-size: 12px;
+margin-left: 98px;
+-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+-webkit-transform-origin: 50% 50%; /* Chrome, Safari, Opera */
+}
+
+.paper:nth-child(even) section.footer{
+font-size: 12px;
+margin-left: -100px;
+-webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+-webkit-transform-origin: 50% 50%; /* Chrome, Safari, Opera */
+}
+.footer {
+font-size: 15px;
+font-family: @font-titrage;
+font-weight: light;
+color: @orange;
+}
+
+
+/* Glossaire style */
+
+#Glossaire {
+     -webkit-region-break-after: always;
+    color: @bleu;
+    margin-top: 100px;
+    text-align: center;
+}
+    
+.nodisplay { /*partie 2 cachée */
+    display: none;
+}
+
+.ElementsDeGlossaire a {
+    color: @bleu;
+    font-size: 9px;
+    }
+
+/* Recettes  style */
+.Recettes {
+    -webkit-region-break-before: always;
+    }
+#Partie1 .h2 {
+    font-size: 100px;
+
+    }
+    
+/* Preface style */
+    
+#Preface {
+    position: relative;
+    width: 200px;
+    margin-bottom: 200px;
+
+}
+    
+
+    
+   /* Parties cachées */
+#page-1 .footer {
+    display: none;
+}
+#Partie2 {
+    display: none;
+}
+    
+#Index {
+    display: none;
+}
+
+#Licences {
+    display: none;
+}
+    
+    
+    
+    
+}
+
+
+
+
+/*Fiche:(-Caroline & So-Hyun) */
+
+@media all and (min-width: 520px) and (max-width: 800px) {
+
+.paper {
+     width: 148mm;
+     height: 105mm;
+     }
+
+.page {
+    width: 148mm;
+     height: 105mm;
+     }
+
+body {
+    font-size: 10px;
+    }
+    
+#Couverture {
+    -webkit-region-break-after: always;
+    }
+#Couverture h1{
+    font-family: @font-titrage;
+    font-weight: 500;
+    font-size:30px;
+    font-style:bold;
+    color: @bleu;
+    margin-left:50%;
+    text-align:left;
+    width:60mm;
+    line-height:1.5em;
+    }
+    
+#Couverture h2{
+    font-family: @font-titrage;
+    font-weight: normal;
+    font-size:12px;
+    line-height:0em;
+    color: @bleu;
+    }
+    
+#Couverture h4{
+    font-size: 10px;
+    margin-left:-25px;
+color:@bleu;
+font-family:@font-labeur;
+}
+
+#Glossaire {
+    display: none;
+    }
+a
+{
+    text-decoration: none;
+        color: black;
+    margin-left:-25px;
+    }
+
+.ElementsDeAppelIndex {
+    color: black;
+    display: none;
+    }
+
+#Preface {
+    display: none;
+    }
+    
+#index{
+    display:none;
+    }
+
+#intro_part2{
+    display:none;
+    }
+    
+.Recettes h2{
+font-style:bold;
+width:35mm;
+float:left;
+height:105mm;
+}
+
+h6 {
+    display: none;
+    }
+
+.Recettes {
+    -webkit-region-break-before: always;
+}
+
+
+
+    }
+
+/* Moyen — Charlotte Angéline Manon */
+
+
+@media all and  (min-width: 800px) and (max-width: 1200px) {
+
+
+#Partie1 h2 {
+    -webkit-transform: rotate(270deg);
+    }
+
+#Partie1 p { 
+    margin: 100mm 0mm 100mm 0mm;
+    }
+    
+p#2 {
+    margin: 40mm 40mm 100mm 10mm; 
+    
+    }
+
+
+.paper {
+             width: 215mm;
+             height: 330mm;
+     }
+
+.page {
+        width: 215mm;
+        height: 330mm;
+         }
+         
+body {
+        font-size: 12px;
+        }
+}
+
+/* Grand — Laura Quentin Clara */
+
+@media all and (min-width: 1200px) and (max-width: 2400px) {
+    
+    
+    
+    /* défitinion du format */
+    
+    .body {height:1075mm;}
+    .paper {width: 990mm; height: 1075mm;}
+    .page {width: 990mm; height: 1075mm;}
+  
+        
+    /* éléments masqués */
+        
+    #AppelIndex {display:none;}         
+    #Colophon {display:none;}
+    #Licences {display:none;}
+    #Preface {display:none;}
+    #Index {display:none;}
+    #Couverture {display:none;}
+    #Glossaire {display:none;}
+    .header {display:none;}
+    h6 {display:none;}    
+    #intro_part2 {display:none;}
+    
+    /* mise en page des recettes */     
+         
+       
+         
+    #Recettes {
+        background-color: @orange;
+        border: solid 1px @bleu;
+        width:57mm;
+        float:left;
+         } 
+         
+            
+  
+    h2 {
+        font-size:8px;
+   color: @bleu;
+}
+
+ h3 {
+font-family: @font-labeur;
+font-size:8px;
+color: @bleu;
+}
+    p {
+        font-size:8px;
+        color: @bleu;
+    }
+    
+    i, em {
+    font-size: 10px;
+}
+    
+    
+}

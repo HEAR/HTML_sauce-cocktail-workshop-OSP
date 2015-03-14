@@ -1,0 +1,282 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+
+/* DÉFINITION DES VARIABLES */
+.header:after {
+        content: "";
+}
+
+.header{
+        display: none;
+
+}
+body{
+    -webkit-region-break-after:always;
+    margin:0;
+}
+/* import des caractères */
+
+@font-face {
+    font-family: InknutAntiqua;
+    src: url("https://github.com/clauseggers/Inknut-Antiqua/raw/master/TTF-OTF/InknutAntiqua-Bold.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: InknutAntiqua;
+    src: url("https://github.com/clauseggers/Inknut-Antiqua/raw/master/TTF-OTF/InknutAntiqua-Light.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Coelacminikin;
+    src: url("http://claraneumann.fr/fonts/coelacanth/CoelacMinikin.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+ 
+@font-face {
+    font-family: Coelacminikin;
+    src: url("http://claraneumann.fr/fonts/coelacanth/CoelacItalic.otf") format('opentype');
+    font-weight: normal;
+    font-style: italic;
+    }
+
+
+/* variables de caractères */
+
+@font-labeur: Coelacminikin;
+@font-titrage: InknutAntiqua;
+
+/* variables de corps de caractères */
+    
+@corps-labeur: 12px;
+@corps-titrage: 100px;
+@corps-mini: 8px;
+@corps-italic: 14px;
+
+
+/* variables de couleurs */
+
+
+@bleu: #0606A6;
+@orange: #FF7519;
+
+
+/* Application au body */
+
+.body {
+    width: 100%;
+}
+
+
+p {
+    font-size: @corps-labeur;
+    font-family: @font-labeur;
+    color: black;
+    }
+    
+
+h1{
+    font-size: @corps-titrage;
+    font-family: @font-titrage;
+    font-weight: bold;
+    line-height: 1em;
+    text-align: right;
+    }
+
+h2{
+    font-family: @font-titrage;
+    font-weight: normal;
+    padding: 0px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    text-color: @bleu;
+    font-size: @corps-mini;
+    font-family: @font-labeur;
+}
+
+div.paper {
+     background-color: white;
+}
+
+
+i, em {
+    font-family: Coelacminikin;
+    font-style: italic;
+    font-size: @corps-italic;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+div.ElementsDeGlossaire {
+    width:auto;
+    height: 2em;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    float:left;
+    position:relative;
+    white-space: nowrap;
+    -webkit-region-break-inside:avoid;
+
+
+
+}
+
+#Preface{
+    position:relative;
+    clear: both;
+
+}
+.Recettes {
+    max-width: 400px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    position:relative;
+    /*display:inline-block;*/
+    -webkit-region-break-inside:avoid;
+    vertical-align:middle;
+       text-align:center;
+       /*flex:    auto;*/
+    float:left;
+
+
+/*
+width:250px;
+        float:left;
+*/
+
+}
+
+#Index{
+    position: relative;
+    clear: both;
+    text-align: left;
+    float:left;
+        -webkit-region-break-after:always;
+                -webkit-region-break-before:always;
+}
+#Licences{
+    position: relative;
+    clear: both;
+    width: 100%;
+        -webkit-region-break-after:always;
+}
+
+#Colophon{
+    position: relative;
+    clear: both;
+    width: 100%;
+        -webkit-region-break-after:always;
+}
+
+/*
+#Partie1, #Partie2 {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+
+} */
+
+/*
+#stories{
+   width:100%;
+   margin:0px auto;
+   text-align:center;
+   height:auto;
+}
+*/
+
+#Couverture{
+    -webkit-region-break-after:always;
+}
+
+#Preface{
+    -webkit-region-break-after:always;
+    -webkit-region-break-before:always;
+}
+
+
+#Preface h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+#ElementsDeIndex{
+    margin-left:0px;
+}
+
+.body.recipient{
+    padding-top: 40px;
+}
+
+#Partie2{
+        -webkit-region-break-after:always;
+    -webkit-region-break-before:always;
+}

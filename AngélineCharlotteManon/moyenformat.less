@@ -1,0 +1,358 @@
+/* DÉFINITION DES VARIABLES */
+.header:after {
+        content: "I want to cook";
+}
+
+/* import des caractères */
+
+@font-face {
+    font-family: InknutAntiquaBold;
+    src: url("https://github.com/clauseggers/Inknut-Antiqua/raw/master/TTF-OTF/InknutAntiqua-Bold.ttf") format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: InknutAntiqua;
+    src: url("https://github.com/clauseggers/Inknut-Antiqua/raw/master/TTF-OTF/InknutAntiqua-Light.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Coelacminikin;
+    src: url("http://claraneumann.fr/fonts/coelacanth/CoelacMinikin.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    color: blue;
+    }
+ 
+
+
+/* variables de caractères */
+
+@font-labeur: Coelacminikin;
+@font-titrage: InknutAntiqua;
+@font-titrage-bold: InknutAntiquaBold;
+
+/* variables de corps de caractères */
+    
+@corps-labeur: 12px;
+@corps-titrage: 120px;
+@corps-mini: 8px;
+@corps-italic: 14px;
+
+
+/* variables de couleurs */
+
+
+@bleu: #0606A6;
+@orange: #FF7519;
+
+
+/* Application au body */
+
+.body {
+    width: 100%;
+}
+/*
+#Couverture {
+    -webkit-region-break-after:always;
+    }*/
+
+#page-1 .header:after{
+    display: none;
+    }
+    
+#page-1 .footer { 
+    display: none; 
+    }
+
+
+div#Glossaire p{
+border: 2px solid orange;
+padding-left: 4px;
+padding-top: 2px
+    }
+
+p {
+    font-size: @corps-labeur;
+    font-family: @font-labeur;
+    color: blue;
+    }
+    
+
+h1{
+    margin-top : -200px;
+    font-size: @corps-titrage;
+    font-family: @font-titrage-bold;
+    line-height: 130px;
+    text-align: left;
+    color: @bleu;
+    -webkit-transform: rotate(270deg);
+    }
+
+h2{
+    font-family: @font-titrage;
+    font-weight: normal;
+    font-size:150px;
+    color: @orange;
+    text-align: right;
+    margin-top: -10mm;
+}
+
+h4{
+    font-family: @font-titrage;
+    color: @orange;
+    text-align: center;
+    margin-top: 100mm;
+    font-size: 10px;
+    }
+
+a {
+    text-decoration: none;
+    text-color: @bleu;
+    font-size: @corps-mini;
+    /*font-family: @font-mini;*/
+}
+
+div.paper {
+     background-color: white;
+}
+
+
+
+i, em {
+    font-family: Coelacminikin;
+    font-style: italic;
+    font-size: @corps-italic;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+
+/* Définition des formats */
+
+
+@media all and  (min-width: 800px) and (max-width: 1200px) {
+
+#Partie1 h2 {
+    -webkit-transform: rotate(270deg); 
+    transform: rotate(270deg);
+float:left;
+position:absolute;
+    }
+
+#Partie1 p { 
+    margin: 40mm 0mm 2mm 0mm;
+    }
+    
+p#numero2 {
+    margin: 40mm 40mm 100mm 10mm; 
+    border: 2px solid orange;
+    padding: 5mm;
+       }
+    
+
+.Recettes:nth-child(even) {
+    color: blue;
+    color: blue;
+    
+    }
+    
+    /* _______ TITRE _____ */
+    
+    #Couverture h2 + h2 {
+         border: 1px solid black;
+         border-top: 0px;
+         padding-bottom: 20px
+        }
+        
+     #Couverture h2:nth-of-type(1) {
+         margin-top: -500px;
+          }
+     #Couverture h2:nth-of-type(2) {
+         margin-top: -200px;
+          }
+    
+
+        
+    #Couverture h2 {
+        padding-right: 10mm;
+        margin-bottom: -700px;
+        }
+        
+    #Couverture h1+ h2 {
+         border: 1px solid black;
+         border-bottom: 0px;
+         padding-bottom: 20px
+        }
+
+    
+/* _____ GLOSSAIRE ______ */
+
+p.ElementsDeGlossaire {
+margin-bottom: 18px;
+text-transform: none;
+width: 150px;
+    }
+   
+   p.ElementsDeGlossaire a { 
+font-size: 9pt;
+font-style: normal;
+color: @bleu;
+}
+    
+    #page-2 .body, #page-3 .body, #page-4 .body, #page-5 .body, #page-6 .body {
+width: 200px;
+float: left;
+display:block;
+position: relative;
+        }
+    
+#Glossaire {
+        -webkit-region-break-after:always;
+    }
+    
+/* _______ PREFACE _______ */
+
+#Preface {
+        -webkit-region-break-after:always;
+width: 140mm;
+margin: auto;
+ }
+ 
+ #Preface p {
+     font-size: 9pt;
+     }
+    
+    
+    
+    /* _______ RECETTE _____ */
+    
+    #Partie1 {
+        width:100%;
+        }
+        .Recettes {
+            -webkit-region-break-before: always;
+            position: relative;
+            
+            }
+    .Recettes p {
+        font-size : 20pt;
+        line-height : 30,9pt;
+        }
+        
+
+    
+    .Recettes h2 {
+    font-family: @font-titrage;
+    font-weight: normal;
+    font-size:100px;
+color: #ff7519;
+/* text-align: right; */
+margin-top: 10mm;
+margin-left: -10mm;
+position: absolute;
+/* top: 50%; */
+/* left: -20%; */
+word-break: break-all;
+z-index: -1;
+        }
+    
+/* .Recettes {
+        -webkit-region-break-after:always;
+    } */
+    
+    .Recettes {
+         -webkit-region-break-inside:avoid;
+        }
+    
+.Recettes  p {
+    margin: 40mm 40mm 2mm 10mm; 
+    border: 2px solid orange;
+    padding: 5mm;
+    display: inline-block;
+    }
+    
+div[id=" TOMATO PURÉE "].Recettes h2 {
+    margin-top: 20mm;
+    }    
+ /* ______IMAGES________ */
+
+#waterzooi {
+width: 420px;
+height: auto;
+margin: auto;
+margin-top: 20mm;
+    }
+    
+pre {  line-height: 6px; }
+
+#waterzooi p {
+margin: 0;
+display: inline;
+padding: 0;
+border: 0;
+font: 5px Arial;
+position: absolute;
+width: 442px;
+overflow: hidden;
+    }
+
+ #waterzooi p.p1 { background-color: #fcf2cf}
+ #waterzooi p.p2 { background-color: #79d9d9}
+    #waterzooi p.p3 { background-color: #85b5a9}
+    #waterzooi p.p4 { background-color: #4045f0}
+    #waterzooi p.p5 { color: #ffffff; background-color: #4045f0}
+    #waterzooi span.s1 {color: #ffffff; background-color: #4045f0}
+    span.s2 {background-color: #85b5a9}
+    #waterzooi span.s3 {background-color: #79d9d9}
+    #waterzooi span.s4 {background-color: #fcf1cf}
+    #waterzooi span.s5 {background-color: #fcf2cf}
+    #waterzooi span.s6 {color: #ffffff}
+    #waterzooi span.s7 {color: #000000; background-color: #fcf2cf}
+    #waterzooi span.s8 {color: #000000; background-color: #85b5a9}
+
+
+.Recettes p+p{
+    margin-top:0mm !important;
+    }
+.paper {
+             width: 227mm;
+             height: 342mm;
+     }
+
+.header:after {
+color: @bleu;
+font-size: 6pt;
+}
+
+/* ___ FOOOOOTER ____ */
+
+.footer {
+font-size: 50px;
+color : blue;
+text-align: left;
+font-family: InknutAntiqua;
+font-weight: normal;
+margin-bottom:10px;
+position: absolute;
+    }
+
+.page {
+        width: 215mm;
+        height: 330mm;
+         }
+         
+body {
+        font-size: 12px;
+        }
+}
+
+
+   /* _______ COLOPHON _____ */
+#Colophon{
+    
+    }
